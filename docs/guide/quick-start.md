@@ -11,7 +11,7 @@ You also need an OpenAI API Key, and there are multiple ways to obtain it online
 **Note: This script has only been verified on Ubuntu Server 22.04 LTS.**
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/deployment.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/alexkpac/chatgpt-ui/main/deployment.sh)
 ```
 
 ### Docker Compose
@@ -23,7 +23,7 @@ The project provides a sample `docker-compose.yml`. If you want to customize the
 
 You can download the `docker-compose.yml` template to your local machine or server by clicking on the link below:
 
-[https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/docker-compose.yml](https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/docker-compose.yml)
+[https://raw.githubusercontent.com/alexkpac/chatgpt-ui/main/docker-compose.yml](https://raw.githubusercontent.com/alexkpac/chatgpt-ui/main/docker-compose.yml)
 
 You can also manually create the `docker-compose.yml` file and copy the following content into the file:
 
@@ -32,7 +32,7 @@ version: '3'
 services:
   client:
     platform: linux/x86_64
-    image: wongsaang/chatgpt-ui-client:latest
+    image: alexkpac/chatgpt-ui-client:latest
     environment:
       - SERVER_DOMAIN=http://backend-web-server
       - DEFAULT_LOCALE=en
@@ -48,7 +48,7 @@ services:
     restart: always
   backend-wsgi-server:
     platform: linux/x86_64
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - APP_DOMAIN=${APP_DOMAIN:-localhost:9000}
       - SERVER_WORKERS=3 # The number of worker processes for handling requests.
@@ -71,7 +71,7 @@ services:
     restart: always
   backend-web-server:
     platform: linux/x86_64
-    image: wongsaang/chatgpt-ui-web-server:latest
+    image: alexkpac/chatgpt-ui-web-server:latest
     environment:
       - BACKEND_URL=http://backend-wsgi-server:8000
     ports:

@@ -7,6 +7,6 @@ export const navbarEn: NavbarConfig = [
   },
   {
     text: 'Changelog',
-    link: 'https://github.com/WongSaang/chatgpt-ui/releases'
+    link: 'https://github.com/alexkpac/chatgpt-ui/releases'
   }
 ]

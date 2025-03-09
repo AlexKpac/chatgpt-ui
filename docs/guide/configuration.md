@@ -16,7 +16,7 @@ For example, if I am using PostgreSQL, the configuration is as follows:
 
 ```
 backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - DB_URL=postgres://postgres:postgrespw@localhost:49153/chatgpt
 ```
@@ -43,7 +43,7 @@ For example:
 
 ```
 backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - OPENAI_API_PROXY=https://openai.proxy.com/v1
 ```
@@ -56,7 +56,7 @@ Suppose I have resolved the domain name `chagpt.com` to the server, and my `back
 
 ```
 backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - APP_DOMAIN=chagpt.com:9000
 ```

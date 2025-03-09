@@ -33,4 +33,4 @@ jobs:
         context: .
         file: static.Dockerfile
         push: true
-        tags: wongsaang/chatgpt-ui-client:latest-static,wongsaang/chatgpt-ui-client:${{ github.ref_name }}-static
+        tags: alexkpac/chatgpt-ui-client:latest-static,alexkpac/chatgpt-ui-client:${{ github.ref_name }}-static

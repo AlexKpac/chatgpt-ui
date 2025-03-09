@@ -10,8 +10,8 @@ ChatGPT UI is an unofficial ChatGPT web client. It supports multiple users, mult
 
 This project consists of two parts, the client-side and the server-side:
 
-- Client-side, based on [Nuxt](https://nuxt.com/), project address: [https://github.com/WongSaang/chatgpt-ui](https://github.com/WongSaang/chatgpt-ui)
-- Server-side, based on [Django](https://djangoproject.com/), project address: [https://github.com/WongSaang/chatgpt-ui-server](https://github.com/WongSaang/chatgpt-ui-server)
+- Client-side, based on [Nuxt](https://nuxt.com/), project address: [https://github.com/alexkpac/chatgpt-ui](https://github.com/alexkpac/chatgpt-ui)
+- Server-side, based on [Django](https://djangoproject.com/), project address: [https://github.com/alexkpac/chatgpt-ui-server](https://github.com/alexkpac/chatgpt-ui-server)
 
 ### Client-side
 - User system, supporting user registration, login, password modification, and more.

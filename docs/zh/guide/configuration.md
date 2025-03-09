@@ -16,7 +16,7 @@
 
 ```
 backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - DB_URL=postgres://postgres:postgrespw@localhost:49153/chatgpt
 ```
@@ -43,7 +43,7 @@ backend-wsgi-server:
 
 ```
 backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - OPENAI_API_PROXY=https://openai.proxy.com/v1 # 注意，域名后面需要带上 v1
 ```
@@ -56,7 +56,7 @@ backend-wsgi-server:
 
 ```
 backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - APP_DOMAIN=chagpt.com:9000
 ```

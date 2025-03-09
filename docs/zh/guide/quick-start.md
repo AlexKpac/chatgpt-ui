@@ -14,7 +14,7 @@
 
 
 ```
-bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/deployment.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/alexkpac/chatgpt-ui/main/deployment.sh)
 ```
 
 ### Docker Compose
@@ -26,7 +26,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/depl
 
 你可以通过下方链接下载 `docker-compose.yml` 模板到本地或服务器：
 
-[https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/docker-compose.yml](https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/docker-compose.yml)
+[https://raw.githubusercontent.com/alexkpac/chatgpt-ui/main/docker-compose.yml](https://raw.githubusercontent.com/alexkpac/chatgpt-ui/main/docker-compose.yml)
 
 也可以手动创建 `docker-compose.yml` 文件，然后复制下面的内容到文件中：
 
@@ -34,7 +34,7 @@ bash <(curl -Ls https://raw.githubusercontent.com/WongSaang/chatgpt-ui/main/depl
 version: '3'
 services:
   client:
-    image: wongsaang/chatgpt-ui-client:latest
+    image: alexkpac/chatgpt-ui-client:latest
     environment:
       - SERVER_DOMAIN=http://backend-web-server
       - DEFAULT_LOCALE=zh
@@ -48,7 +48,7 @@ services:
     networks:
       - chatgpt_ui_network
   backend-wsgi-server:
-    image: wongsaang/chatgpt-ui-wsgi-server:latest
+    image: alexkpac/chatgpt-ui-wsgi-server:latest
     environment:
       - APP_DOMAIN=${APP_DOMAIN:-localhost:9000} # CSRF 白名单，在这里设置为 chatgpt-ui-web-server 的地址+端口, 默认： localhost:9000
       - SERVER_WORKERS=3 # gunicorn 的工作进程数，默认为 3
@@ -70,7 +70,7 @@ services:
     networks:
       - chatgpt_ui_network
   backend-web-server:
-    image: wongsaang/chatgpt-ui-web-server:latest
+    image: alexkpac/chatgpt-ui-web-server:latest
     environment:
       - BACKEND_URL=http://backend-wsgi-server:8000
     ports:

@@ -5,8 +5,8 @@ export const STORAGE_KEY = {
 }
 
 export const MODELS = {
-  'gpt-3.5-turbo': {
-    name: 'gpt-3.5-turbo',
+  'deepseek-chat': {
+    name: 'deepseek-chat',
     frequency_penalty: 0.0,
     presence_penalty: 0.0,
     total_tokens: 4096,
@@ -61,4 +61,4 @@ export const MODELS = {
   }
 }
 
-export const DEFAULT_MODEL_NAME = 'gpt-3.5-turbo'
+export const DEFAULT_MODEL_NAME = 'deepseek-chat'
